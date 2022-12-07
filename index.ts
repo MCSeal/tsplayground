@@ -59,4 +59,13 @@ let point: { x: number; y: number } = {
 const logNumber: (i: number) => void = (i: number) => {
   console.log(i);
 };
-console.log(logNumber(1));
+
+//variables
+
+const cordinatesJson = '{"x": 15, "y": 25}';
+
+const cords: { x: number; y: number } = JSON.parse(cordinatesJson);
+
+console.log(cords);
+
+console.log('e');
