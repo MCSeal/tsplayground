@@ -1,55 +1,62 @@
-// import axios from 'axios';
-// const url = 'https://jsonplaceholder.typicode.com/todos/1';
+import axios from 'axios';
+const url = 'https://jsonplaceholder.typicode.com/todos/1';
 
-// interface Todo {
-//   id: number;
-//   title: string;
-//   completed: boolean;
-// }
+interface Todo {
+  id: number;
+  title: string;
+  completed: boolean;
+}
 
-// axios(url).then((response) => {
-//   const todo = response.data as Todo;
-//   const id = todo.id;
-//   const title = todo.title;
+axios(url).then((response) => {
+  const todo = response.data as Todo;
+  const id = todo.id;
+  const title = todo.title;
 
-//   const finished = todo.completed;
-//   logTodo(id, title, finished);
-// });
+  const finished = todo.completed;
+  logTodo(id, title, finished);
+});
 
-// const logTodo = (id: number, title: string, completed: boolean) => {
-//   console.log(
-//     `the todo with id : ${id}
-//     has a title of ${title}
-//     and is it finished? ${completed}`
-//   );
-// };
+const logTodo = (id: number, title: string, completed: boolean) => {
+  console.log(
+    `the todo with id : ${id}
+    has a title of ${title}
+    and is it finished? ${completed}`
+  );
+};
 
-// const today = new Date();
+const today = new Date();
 
-// today.getMonth();
+today.getMonth();
 
-// const person = {
-//   age: 25,
+const person = {
+  age: 25,
+};
 
-// };
+class color {}
 
-// class color {
-
-// }
-
-// const red = new color();
+const red = new color();
 
 let speed: string = 'fast';
 let hasName: boolean = false;
 
+//array
 let apples: string[] = ['macintosh', 'fuji', 'granny smith'];
 let numbers: number[] = [1, 2, 3];
 
+//classes
 class Car {}
 
 let car: Car = new Car();
+//objects
 
 let point: { x: number; y: number } = {
   x: 10,
   y: 20,
 };
+
+//function
+
+const logNumber: (i: number) => void = (i: number) => {
+  console.log(i);
+};
+console.log(logNumber(1));
