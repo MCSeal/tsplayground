@@ -66,12 +66,52 @@ const cordinatesJson = '{"x": 15, "y": 25}';
 
 const cords: { x: number; y: number } = JSON.parse(cordinatesJson);
 
-console.log(cords);
+// console.log(cords);
 
-console.log('e');
+// console.log('e');
 
 //3 functions again
 
+//specifies return number
+
 const add = (a: number, b: number): number => {
   return a + b;
+};
+
+//infers the return value
+
+const add2 = (a: number, b: number) => {
+  return a + b;
+};
+
+const throwError = (message: string): string => {
+  if (!message) {
+    throw new Error(message);
+  }
+  return message;
+};
+
+const forecast = {
+  date: new Date(),
+  weather: 'sunny',
+};
+
+const logWeather = ({ date, weather }: { date: Date; weather: string }) => {
+  console.log(date);
+  console.log(weather);
+};
+
+console.log(logWeather(forecast));
+
+//objects
+
+const profile = {
+  name: 'alex',
+  obj: {
+    lat: 0,
+    long: 10,
+  },
+  setAge(age: number): void {
+    this.age = age;
+  },
 };
