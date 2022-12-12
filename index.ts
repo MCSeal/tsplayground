@@ -127,3 +127,5 @@ const {
 // console.log(profile);
 
 const carMakers: string[] = ['ford', 'toyota', 'chevy'];
+
+const importantDates: Date[] | string[] = [new Date()];
