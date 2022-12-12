@@ -69,3 +69,9 @@ const cords: { x: number; y: number } = JSON.parse(cordinatesJson);
 console.log(cords);
 
 console.log('e');
+
+//3 functions again
+
+const add = (a: number, b: number): number => {
+  return a + b;
+};
