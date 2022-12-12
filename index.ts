@@ -107,6 +107,7 @@ console.log(logWeather(forecast));
 
 const profile = {
   name: 'alex',
+  age: 6,
   obj: {
     lat: 0,
     long: 10,
@@ -115,3 +116,14 @@ const profile = {
     this.age = age;
   },
 };
+
+const { age }: { age: number } = profile;
+const {
+  obj: { lat, long },
+}: { obj: { lat: number; long: number } } = profile;
+
+// console.log(profile);
+// profile.setAge(5);
+// console.log(profile);
+
+const carMakers: string[] = ['ford', 'toyota', 'chevy'];
